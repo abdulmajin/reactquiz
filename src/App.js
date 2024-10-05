@@ -10,7 +10,7 @@ import Error from "./component/Error";
 import Start from "./component/Start";
 import { useEffect, useReducer } from "react";
 import Result from "./component/Result";
-
+import questionpacks from "./questions.json";
 const initial = {
   status: null,
   question: [],
@@ -107,16 +107,18 @@ function App() {
 
   useEffect(
     function () {
-      fetch("http://localhost:8000/questions")
+      /*    fetch("{questionpacks}")
         .then((res) => res.json())
         .then((data) => dispatch({ type: "datareceived", payload: data }))
         .catch((error) => {
           dispatch({ type: "datafail" });
-        });
+        });*/
+      dispatch({ type: "datareceived", payload: questionpacks });
     },
     [dispatch]
   );
 
+  console.log(questionpacks);
   return (
     <div className="App">
       <Header status={status} />

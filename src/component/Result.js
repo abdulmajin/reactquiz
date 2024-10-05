@@ -1,25 +1,8 @@
 import React, { useEffect } from "react";
 import "../css/result.css";
-import { type } from "@testing-library/user-event/dist/type";
+import questionpacks from "../questions.json";
 
 export default function Result({ points, question, dispatch }) {
-  /*const refetch = async (dispatch) => {
-    const res = await fetch("http://localhost:8000/questions");
-    const data = await res.json();
-    dispatch({ type: "restart", payload: data });
-  };*/
-
-  const refetch = async () => {
-    try {
-      const res = await fetch("http://localhost:8000/questions");
-
-      const data = await res.json();
-      dispatch({ type: "restart", payload: data });
-    } catch (error) {
-      console.error("error in Fetching data");
-      dispatch({ type: "datafail" });
-    }
-  };
   const overAllPoint = question.reduce((sum, acc) => acc.points + sum, 0);
   const percentCal = (points / overAllPoint) * 100;
 
@@ -30,7 +13,10 @@ export default function Result({ points, question, dispatch }) {
         {overAllPoint} ({Math.ceil(percentCal)}%)
       </p>
       <p className="highscore">(Highscore: {points} points)</p>
-      <button className="btnrestart" onClick={() => refetch()}>
+      <button
+        className="btnrestart"
+        onClick={() => dispatch({ type: "restart", payload: questionpacks })}
+      >
         Restart quiz
       </button>
     </div>
