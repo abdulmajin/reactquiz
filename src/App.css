@@ -1,5 +1,16 @@
 .App {
-  text-align: center;
+  background-color: #eff7ec;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  margin: 10px 120px;
+  border-radius: 20px;
+  background-color: #ffffff;
 }
 
 .App-logo {
@@ -34,5 +45,18 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+    background-color: #ccc;
+  }
+
+  .main {
+    margin: 50px 25px;
+    padding: 35px 10px;
+    min-width: 220px;
   }
 }

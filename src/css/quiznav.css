@@ -1,0 +1,70 @@
+.topnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 35px;
+  margin: 15px 0px;
+  gap: 400px;
+}
+.clock {
+  height: 30px;
+}
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.timertrack p {
+  margin: 2px;
+}
+.timerem {
+  color: #b9b9b9;
+  font-weight: 1000px;
+}
+.runtime {
+  letter-spacing: 2.5px;
+  font-weight: 700;
+}
+.submitbtn {
+  background-color: #273d30;
+  color: white;
+  padding: 6px 25px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .topnav {
+    margin: 5px 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 155px;
+  }
+}
+
+/* For screens that are 480px wide or smaller (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+  .topnav {
+    margin: 10px 2px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+  }
+  .timer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .clock {
+    height: 20px;
+  }
+}

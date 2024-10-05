@@ -1,0 +1,147 @@
+.qContainter {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.questioDisplay {
+  width: 350px;
+  font-size: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.options {
+  border: 1px solid #b8b7c1;
+  background: white;
+  padding: 10px 13px;
+  width: 15rem;
+  text-align: left;
+  color: black;
+  gap: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+.btn-option:not([disabled]):hover {
+  transform: translateX(1.2rem);
+}
+
+.options[disabled]:hover {
+  cursor: not-allowed;
+}
+.optionList {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: start;
+}
+.alignq {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer {
+  margin-top: 50px;
+  display: flex;
+  gap: 150px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qnum {
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr 5cqb;
+  gap: 10px;
+  align-content: center;
+}
+
+.qnumbtn {
+  margin: 0px;
+  border: 1px solid #b8b7c1;
+  background: white;
+  font-weight: 900;
+  width: 60px;
+  height: 40px;
+}
+.nextprevbtn {
+  background-color: black;
+  color: white;
+  padding: 9px 25px;
+  border-radius: 7px;
+}
+
+.answer {
+  background-color: #167d76;
+  color: white;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .alignq {
+    width: 150px;
+  }
+  .options {
+    margin: 2px 0px;
+    width: 12rem;
+    padding: 5px 10px;
+  }
+  .qnumbtn {
+    height: 30px;
+    width: 40px;
+  }
+  .questioDisplay {
+    margin: 14px 0px;
+    width: 200px;
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .footer {
+    display: flex;
+    gap: 250px;
+    margin-top: 15px;
+    align-items: center;
+  }
+}
+
+/* For screens that are 480px wide or smaller (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+  .alignq {
+    width: 250px;
+    justify-content: center;
+    margin: 5px;
+  }
+  .questioDisplay {
+    width: 290px;
+  }
+  .qContainter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .qnum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .qnumbtn {
+    height: 20px;
+    width: 30px;
+    padding: 0px;
+  }
+  .footer {
+    margin-top: 10px;
+  }
+
+  .nextprevbtn {
+    padding: 10px 15px;
+    border-radius: 7px;
+  }
+}

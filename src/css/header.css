@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.avatar {
+  height: 30px;
+  border-radius: 50%;
+}
+
+.profileDatails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.username {
+  margin: 0px;
+}

@@ -1,0 +1,28 @@
+.resultcont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.result {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+.highscore {
+  color: black;
+  font-weight: 900;
+}
+.btnrestart {
+  margin: 10px;
+  cursor: pointer;
+  padding: 20px 40px;
+  color: white;
+  width: 210px;
+  border-radius: 10px;
+  background-color: black;
+  font-weight: 900;
+}
