@@ -52,6 +52,7 @@ function reducer(state, action) {
         index: 0,
         secCount: 59,
         muniteCount: 10,
+        points: 0,
       };
     }
     case "next": {
